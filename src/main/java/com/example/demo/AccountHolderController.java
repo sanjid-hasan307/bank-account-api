@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,7 +14,7 @@ public class AccountHolderController {
     private AccountHolderService service;
 
     @PostMapping
-    public AccountHolder create(@RequestBody AccountHolder accountHolder) {
+    public AccountHolder create(@Valid @RequestBody AccountHolder accountHolder) {
         return service.createAccount(accountHolder);
     }
 
