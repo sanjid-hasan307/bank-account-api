@@ -18,7 +18,7 @@ public class AccountHolder {
     private String fullName;
 
     @NotBlank(message = "Account number is required")
-    @Pattern(regexp = "^[0-9]{10}$", message = "Account number must be exactly 11 digits")
+    @Pattern(regexp = "^[0-9]{10}$", message = "Account number must be exactly 10 digits")
     private String accountNumber;
 
     @NotBlank(message = "NID is required")
